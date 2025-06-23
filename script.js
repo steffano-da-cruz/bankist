@@ -2,7 +2,7 @@
 
 // Data
 const account1 = {
-  owner: "Jonas Schmedtmann",
+  owner: "Steffano Cruz",
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
   pin: 1111,
@@ -56,6 +56,8 @@ const inputTransferAmount = document.querySelector(".form__input--amount");
 const inputLoanAmount = document.querySelector(".form__input--loan-amount");
 const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
+
+const loginInfo = document.querySelector(".login-info");
 
 const displayMovements = function (movements) {
   containerMovements.innerHTML = "";
@@ -126,6 +128,8 @@ btnLogin.addEventListener("click", function (e) {
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(" ")[0]
     }`;
+
+    loginInfo.style.opacity = 0;
     containerApp.style.opacity = 100;
 
     // Clear input fields
